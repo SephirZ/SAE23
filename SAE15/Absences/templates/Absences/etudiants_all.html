@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ressources</title>
+</head>
+<body>
+<a href="ajout/"> Ajouter un etudiant </a>
+ <ol>
+        {% for l in Liste %}
+            <li> {{l}} </br>
+                <a href="./affiche/{{l.id}}"> Détails </a> <a href="delete/{{l.id}}"> Effacer </a>
+                <a href="update/{{l.id}}"> Mettre à jour </a>
+            </li>
+        {%endfor%}
+    </ol>
+</body>
+</html>
