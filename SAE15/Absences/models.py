@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Groupes(models.Model):
-    nomgroupe = models.CharField(max_length=100)
+    nomgroupe = models.CharField(max_length=100) #eeeeeeesqfsfs
 
     def __str__(self):
         chaine = f" Groupe : '{self.nomgroupe}'"
