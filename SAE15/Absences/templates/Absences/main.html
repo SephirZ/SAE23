@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'Absences/main.css'%}">
+    <title>{% block title %} Gestion des absences {% endblock %} </title>
+</head>
+<body>
+    <aside id="header">
+        {% block header %}
+        <nav>
+            <a href="/Absences/">Accueil</a>
+            <a href="/Absences/cours_all">Cours</a>
+            <a href="/Absences/enseignant_all">Enseignants</a>
+            <a href="/Absences/etudiants_all">Etudiants</a>
+            <a href="/Absences/abscours_all">Absences</a>
+        </nav>
+        {% endblock %}
+    </aside>
+    <div id="content">
+        {% block content %}
+        <h1> bloc principal </h1>
+        {% endblock %}
+    </div>
+</body>
+</html>

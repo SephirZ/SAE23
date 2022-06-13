@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Ressources</title>
-</head>
-<body>
-<a href="ajout/"> Ajouter des absences</a>
+{%extends 'Absences/main.html'%}
+{%block content%}
+<a class="add" href="ajout/"> Ajouter des absences </a>
+<h1> Liste de toutes les absences</h1>
  <ol>
         {% for l in ListeA %}
             <li> {{l}} </br>
@@ -14,5 +10,6 @@
             </li>
         {%endfor%}
     </ol>
+{%endblock%}
 </body>
 </html>

@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title> Fiche {{AbsCours.Cours}}</title>
-</head>
-<body>
-<h1> ABSENTS :  </h1>
+{%extends 'Absences/main.html'%}
+{%block content%}
+<h1> ABSENTS : </h1>
 <p> {{AbsCours.etudiants}} </p>
 <p>{{Cours}}</p>
-</body>
-</html>
+{%endblock%}

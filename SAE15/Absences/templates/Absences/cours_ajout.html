@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Musique</title>
-</head>
-<body>
+{%extends 'Absences/main.html'%}
+{%block content%}
 <h1> Saisie d'un cours </h1>
     {% if id == '' %}
 <form method="post" action="/Absences/traitementmaj/{{id}}/">
         {% else %}
             <form method="post" action="/Absences/cours_traitement/">
         {% endif %}
-
-
         {% csrf_token %}
-
-        {{ form.as_ul }} <!-- permet d'afficher tous les champs sous forme d'une liste
--->
-        <input type="submit" value="entrée les données"\>
+        {{ form.as_ul }}
+        <input type="submit" value="Envoyer les données"\>
             </form> </form>
+{%endblock%}
 </body>
 </html>

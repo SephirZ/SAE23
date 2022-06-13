@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Ressources</title>
-</head>
-<body>
-<a href="ajout/"> Ajouter un groupe </a>
+{%extends 'Absences/main.html'%}
+{%block content%}
+<a class="add" href="ajout/"> Ajouter un groupe </a>
+<h1> Liste de tous les groupes </h1>
  <ol>
         {% for l in Liste %}
             <li> {{l}} </br>
@@ -14,5 +10,6 @@
             </li>
         {%endfor%}
     </ol>
+{%endblock%}
 </body>
 </html>

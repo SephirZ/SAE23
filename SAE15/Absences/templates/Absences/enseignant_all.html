@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Ressources</title>
-</head>
-<body>
-<a href="ajout/"> Ajouter un enseignant </a>
+{%extends 'Absences/main.html'%}
+{%block content%}
+<a class="add" href="ajout/"> Ajouter un enseignant </a>
+<h1> Liste de tous les enseignants </h1>
  <ol>
         {% for l in ListeE %}
             <li> {{l}} </br>
@@ -14,5 +10,6 @@
             </li>
         {%endfor%}
     </ol>
+{%endblock%}
 </body>
 </html>

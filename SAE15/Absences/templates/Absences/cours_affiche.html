@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title> Fiche {{Cours.titre_du_cours}}</title>
-</head>
-<body>
-<h1> {{Cours.titre_du_cours}} </h1>
+{%extends 'Absences/main.html'%}
+{%block content%}
+<h1>{{Cours.titre_du_cours}} </h1>
 <p>{{Cours}}</p>
-</body>
-</html>
+{%endblock%}
