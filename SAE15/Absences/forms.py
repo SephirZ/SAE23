@@ -35,12 +35,12 @@ class EnseignantForm(ModelForm):
 class CoursForm(ModelForm):
     class Meta:
         model = models.Cours
-        fields = ('titre_du_cours', 'date', 'enseignant', 'durée', 'groupe')
+        fields = ('titre_du_cours', 'date', 'enseignant', 'duree', 'groupe')
         labels = {
             'titre_du_cours' : _('Titre du cours') ,
             'date' : _('Date du cours'),
             'enseignant' : _('Enseignant du cours'),
-            'durée' : _('Durée du cours'),
+            'duree' : _('Durée du cours'),
             'groupe' : _('Groupe'),
         }
 

@@ -16,7 +16,7 @@ class Etudiants(models.Model):
     nometu = models.CharField(max_length=100)
     prenometu = models.CharField(max_length=100)
     emailetu = models.CharField(max_length=50)
-    photoetu = models.TextField(null = True, blank = True)
+    photoetu = models.ImageField(null=True, blank=True)
     groupesetu = models.ForeignKey("groupes", on_delete=models.CASCADE, default=None)
 
     def __str__(self):
@@ -43,7 +43,7 @@ class Cours(models.Model):
     titre_du_cours = models.CharField(max_length = 100)
     date = models.DateField(blank=True, null = True)
     enseignant = models.ForeignKey("enseignant", on_delete=models.CASCADE, default=None)
-    durée = models.CharField(max_length = 10)
+    duree = models.CharField(max_length = 10)
     groupe = models.ForeignKey("groupes", on_delete=models.CASCADE, default=None)
 
 
@@ -52,7 +52,7 @@ class Cours(models.Model):
         return chaine
 
     def dico(self):
-        return {"Titre du cours": self.titre_du_cours, "Date du cours": self.date,"Enseignant du cours": self.enseignant, "Durée du cours": self.durée, "Groupe": self.groupe}
+        return {"titre_du_cours": self.titre_du_cours, "date": self.date,"enseignant": self.enseignant, "duree": self.duree, "groupe": self.groupe}
 
 class AbsCours(models.Model):
     cours = models.ForeignKey("cours", on_delete=models.CASCADE, default=None)

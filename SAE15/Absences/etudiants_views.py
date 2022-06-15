@@ -33,7 +33,7 @@ def affiche(request, id):
     return render(request, "Absences/etudiants_affiche.html", {"Etudiants":etudiants})
 
 def update(request, id):
-    etudiants=models.Groupes.objects.get(pk=id)
+    etudiants=models.Etudiants.objects.get(pk=id)
     etform = EtudiantsForm(etudiants.dico())
     return render(request, 'Absences/etudiants_update.html', {"form":etform, "id":id})
 

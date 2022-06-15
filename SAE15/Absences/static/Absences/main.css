@@ -9,7 +9,7 @@ nav {
 }
 
 nav a {
-    width: calc(100%/5.044);
+    width: calc(100%/5.1);
     display:inline-block;
     border-radius:2px;
     color:white;
