@@ -26,13 +26,21 @@ nav a:hover {
 
 li {
     text-align:center;
+    margin: 1% 0 1% 0;
+}
+label {
+    margin:0 0 0 0;
+
+
 }
 ol {
     padding:0;
 }
 h1 {
     text-align:center;
+    font-size:36px;
 }
+
 input {
     display:block;
     width:25%;
@@ -49,4 +57,7 @@ input {
     padding:1%;
     border-radius:30px;
     font-size:20px;
+}
+.add:hover {
+    background-color:gray;
 }

@@ -48,7 +48,7 @@ class Cours(models.Model):
 
 
     def __str__(self):
-        chaine = f"Titre :{self.titre_du_cours} Date : {self.date}. Enseignant :  {self.enseignant}, durée : {self.durée}, Groupe : {self.groupe}"
+        chaine = f"{self.titre_du_cours} Date : {self.date}. Enseignant :  {self.enseignant}, durée : {self.durée}, Groupe : {self.groupe}"
         return chaine
 
     def dico(self):
