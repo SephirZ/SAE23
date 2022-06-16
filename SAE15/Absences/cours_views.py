@@ -12,13 +12,13 @@ def index(request):
 def ajout(request):
     if request.method == "POST":
         form = CoursForm(request)
-        if form.is_valid(): # validation du formulaire.
-            cours = form.save() # sauvegarde dans la base
-            return render(request,"Absences/cours_affiche.html", {"form": form}) #aa
+        if form.is_valid():
+            cours = form.save()
+            return render(request,"Absences/cours_affiche.html", {"form": form})
         else:
             return render(request,"Absences/cours_ajout.html",{"form": form})
     else:
-        form = CoursForm() # création d'un formulaire vide
+        form = CoursForm()
         return render(request,"Absences/cours_ajout.html",{"form" : form})
 
 def traitement(request):

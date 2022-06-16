@@ -16,11 +16,11 @@ class Etudiants(models.Model):
     nometu = models.CharField(max_length=100)
     prenometu = models.CharField(max_length=100)
     emailetu = models.CharField(max_length=50)
-    photoetu = models.ImageField(null=True, blank=True)
+    photoetu = models.ImageField(null=True, blank=True, upload_to='images/')
     groupesetu = models.ForeignKey("groupes", on_delete=models.CASCADE, default=None)
 
     def __str__(self):
-        chaine = f"{self.nometu} {self.prenometu}. Adresse mail :  {self.emailetu}, Photo : {self.photoetu}, Groupe : {self.groupesetu}"
+        chaine = f"{self.nometu} {self.prenometu}, Groupe : {self.groupesetu.nomgroupe} | E-MAIL :  {self.emailetu} Photo : {self.photoetu}"
         return chaine
 
     def dico(self):
@@ -32,7 +32,7 @@ class Enseignant(models.Model):
     emailens = models.CharField(max_length=100)
 
     def __str__(self):
-        chaine = f"{self.nomens} {self.prenomens}"
+        chaine = f"Monsieur {self.nomens} {self.prenomens} | E-MAIL : {self.emailens}"
         return chaine
 
     def dico(self):
@@ -48,7 +48,7 @@ class Cours(models.Model):
 
 
     def __str__(self):
-        chaine = f"Cours de {self.titre_du_cours}, le {self.date}. Enseignant :  {self.enseignant}, durée : {self.duree}, Groupe : {self.groupe}"
+        chaine = f"Cours de {self.titre_du_cours}, le {self.date}. Enseignant : M.{self.enseignant.nomens} | durée : {self.duree}, Groupe : {self.groupe}"
         return chaine
 
     def dico(self):
@@ -62,7 +62,8 @@ class AbsCours(models.Model):
 
 
     def __str__(self):
-        chaine = f"Cours : {self.cours} Etudiants absents : {self.etudiants}. justifié :  {self.justified}, justificatif : {self.justificatif}"
+        chaine = f"Absences au cours de {self.cours.titre_du_cours} de M.{self.cours.enseignant.nomens} {self.cours.enseignant.prenomens}"
+
         return chaine
 
     def dico(self):

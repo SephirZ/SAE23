@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Ajout d'un etudiant</title>
-</head>
-<body>
-  <form method="post" action="/Absences/etudiants_traitement/">
+{%extends 'Absences/main.html'%}
+{%block content%}
+  <form method="post" enctype="multipart/form-data" action="/Absences/etudiants_traitement/">
     {% csrf_token %}
     {{ form.as_ul }}
     <input type="submit" value="Envoyer les données"/>
   </form>
-</body>
-</html>
+{%endblock%}

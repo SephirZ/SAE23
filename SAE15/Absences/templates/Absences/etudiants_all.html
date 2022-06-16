@@ -4,7 +4,7 @@
 <h1> Liste de tous les étudiants </h1>
  <ol>
         {% for l in Liste %}
-            <li> {{l.nometu}} {{l.prenometu}} </br>
+            <li class="liste"> {{l.nometu}} {{l.prenometu}} </br>
                 <a href="./affiche/{{l.id}}"> Détails </a> <a href="delete/{{l.id}}"> Effacer </a>
                 <a href="update/{{l.id}}"> Mettre à jour </a>
             </li>
